@@ -1,25 +1,25 @@
 @import 'vars';
 
-.OrdenItem {
+.OrderItem {
   display: grid;
   grid-template-columns: auto 1fr auto auto;
   gap: 16px;
   margin-bottom: 24px;
   align-items: center;
 }
-.OrdenItem figure {
+.OrderItem figure {
   margin: 0;
 }
-.OrdenItem figure img {
+.OrderItem figure img {
   width: 70px;
   height: 70px;
   border-radius: 20px;
   object-fit: cover;
 }
-.OrdenItem p:nth-child(2) {
+.OrderItem p:nth-child(2) {
   color: $--very-light-pink;
 }
-.OrdenItem p:nth-child(3) {
+.OrderItem p:nth-child(3) {
   font-size: $--md;
   font-weight: bold;
 }

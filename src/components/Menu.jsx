@@ -11,11 +11,9 @@ const Menu = () => {
             My orders
           </a>
         </li>
-
         <li>
           <a href="/">My account</a>
         </li>
-
         <li>
           <a href="/">Sign out</a>
         </li>
