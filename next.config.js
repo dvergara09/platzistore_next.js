@@ -10,7 +10,7 @@ module.exports = {
       {
         source: '/hola',
         destination: '/hello',
-        permanet: true,
+        permanent: true,
       },
     ];
   },
