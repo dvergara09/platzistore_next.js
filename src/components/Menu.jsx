@@ -1,9 +1,10 @@
-import React from 'react'
-import '@styles/Menu.scss'
+import React from 'react';
+
+import styles from '@styles/Menu.module.scss';
 
 const Menu = () => {
   return (
-    <div className="Menu">
+    <div className={styles.Menu}>
       <ul>
         <li>
           <a href="/" className="title">
@@ -20,7 +21,7 @@ const Menu = () => {
         </li>
       </ul>
     </div>
-  )
-}
+  );
+};
 
-export default Menu
+export default Menu;
