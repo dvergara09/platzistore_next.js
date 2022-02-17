@@ -1,18 +1,19 @@
-import React, { useContext, useState } from 'react'
-import '@styles/ProductItem.scss'
-import AppContext from '@context/AppContext'
-import iconAdd from '@icons/bt_add_to_cart.svg'
+import React, { useContext, useState } from 'react';
+import AppContext from '@context/AppContext';
+import iconAdd from '@icons/bt_add_to_cart.svg';
+
+import styles from '@styles/ProductItem.module.scss';
 
 const ProductItem = ({ product }) => {
-  const { addToCart } = useContext(AppContext)
+  const { addToCart } = useContext(AppContext);
 
   const handleCart = (item) => {
-    addToCart(item)
-  }
+    addToCart(item);
+  };
   return (
-    <div className="ProductItem">
+    <div className={styles.ProductItem}>
       <img src={product.images[0]} alt={product.title} />
-      <div className="product-info">
+      <div className={styles['product-info']}>
         <div>
           <p>${product.price}</p>
           <p>{product.title}</p>
@@ -22,7 +23,7 @@ const ProductItem = ({ product }) => {
         </figure>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default ProductItem
+export default ProductItem;
