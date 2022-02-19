@@ -1,17 +1,18 @@
-import React from 'react'
-import ProductInfo from '@components/ProductInfo'
-import '@styles/ProductDetail.scss'
-import iconClose from '@icons/icon_close.png'
+import React from 'react';
+import Image from 'next/image';
+import ProductInfo from '@components/ProductInfo';
+import iconClose from '@icons/icon_close.png';
+import styles from '@styles/ProductDetail.module.scss';
 
 const ProductDetail = () => {
   return (
-    <aside class="product-detail">
-      <div class="product-detail-close">
-        <img src={iconClose} alt="close" />
+    <aside class={styles['product-detail']}>
+      <div class={styles['product-detail-close']}>
+        <Image src={iconClose} alt="close" />
       </div>
       <ProductInfo />
     </aside>
-  )
-}
+  );
+};
 
-export default ProductDetail
+export default ProductDetail;
