@@ -1,4 +1,6 @@
 import React, { useRef } from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
 import logo from '@logos/logo_yard_sale.svg';
 
 import styles from '@styles/Login.module.scss';
@@ -8,17 +10,17 @@ const Login = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    const formData = new FormData(form.current);
+    /* const formData = new FormData(form.current);
     const data = {
       username: formData.get('email'),
       password: formData.get('password'),
-    };
+    }; */
   };
 
   return (
     <div className={styles.Login}>
       <div className={styles['Login-container']}>
-        <img src={logo} alt="logo" className={styles.logo} />
+        <Image src={logo} alt="logo" className={styles.logo} />
 
         <form action="/" className={styles.form} ref={form}>
           <label htmlFor="email" className={styles.label}>
@@ -34,7 +36,7 @@ const Login = () => {
           <button className={`${styles['primary-button']} ${styles['login-button']}`} onClick={handleSubmit}>
             Login
           </button>
-          <a href="/">Forgot my password</a>
+          <Link href="/">Forgot my password</Link>
         </form>
 
         <button className={`${styles['secondary-button']} ${styles['signup-button']}`}>Sign up</button>
