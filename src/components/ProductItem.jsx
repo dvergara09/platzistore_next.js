@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
 import React, { useContext } from 'react';
 import Image from 'next/image';
 import AppContext from '@context/AppContext';
@@ -21,7 +23,7 @@ const ProductItem = ({ product }) => {
           <p>${product?.price}</p>
           <p>{product?.title}</p>
         </div>
-        <figure className={styles['more-clickable-area']} accessibleOnClick={() => handleClick(product)}>
+        <figure className={styles['more-clickable-area']} onClick={() => handleClick(product)}>
           {state.cart.includes(product) ? (
             <Image className={(styles.disabled, styles['add-to-cart-btn'])} src={addedToCartImage} alt="added to cart" />
           ) : (

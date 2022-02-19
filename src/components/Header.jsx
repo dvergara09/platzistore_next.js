@@ -1,3 +1,6 @@
+/* eslint-disable @next/next/no-img-element */
+/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
 import React, { useContext } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -15,7 +18,7 @@ const Header = () => {
   return (
     <>
       <nav className={styles.Nav}>
-        <Image src={menu} alt="menu" className={styles.menu} />
+        <img src={menu.src} alt="menu" className={styles.menu} />
         <div className={styles['navbar-left']}>
           <Link href="/" passHref>
             <Image src={logo} alt="logo" className={styles['nav-logo']} />
@@ -43,10 +46,10 @@ const Header = () => {
         </div>
         <div className={styles['navbar-right']}>
           <ul>
-            <li className={`${styles['more-clickable-area']} ${styles['navbar-email']} ${styles.pointer}`} accessibleOnClick={() => toggleMenu()}>
+            <li className={`${styles['more-clickable-area']} ${styles['navbar-email']} ${styles.pointer}`} onClick={() => toggleMenu()}>
               platzi@example.com
             </li>
-            <li className={styles['navbar-shopping-cart']} accessibleOnClick={() => toggleOrder()}>
+            <li className={styles['navbar-shopping-cart']} onClick={() => toggleOrder()}>
               <Image className={(styles['more-clickable-area'], styles.pointer)} src={shoppingCart} alt="shopping cart" />
               {state.cart.length > 0 ? <div>{state.cart.length}</div> : null}
             </li>
